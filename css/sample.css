@@ -51,7 +51,7 @@ main {
     flex-direction: column;
 }
 
-.box {
+box {
     display: flex;
     justify-content: center;
     align-items: center;

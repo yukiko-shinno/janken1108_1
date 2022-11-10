@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-    <meta charset="Shift_JIS">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/new.css">
@@ -37,32 +36,32 @@
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        function myGame() {
+        function ShowImage() {
             myNumber = document.getElementById("mySelect").selectedIndex;
             hisNumber = Math.floor(Math.random() * 3);
             if (hisNumber == 0) {
-                $("#message2").html('<img src="img/ぐー.png" alt="あなたはグーを出しました">');
+                document.getElementById("img").src = "ぐー.png";
             }
             if (hisNumber == 1) {
-                $("#message2").html('<img src="img/ちょき.png" alt="あなたはチョキを出しました">');
+                document.getElementById("img").src = "ちょき.png";
             }
             if (hisNumber == 2) {
-                $("#message2").html('<img src="img/パー.png" alt="相手はパーを出しました">');
+                document.getElementById("img").src = "パー.png";
             }
             if (myNumber - hisNumber == -2) {
-                $("#message2").html('<img src="img/lose.png" alt="lose">');
+                document.getElementById("img").src = "lose.png";
             }
             if (myNumber - hisNumber == -1) {
-                $("#message2").html('<img src="img/win.png" alt="win">');
+                document.getElementById("img").src = "win.png";
             }
             if (myNumber - hisNumber == 0) {
-                $("#message2").html('<img src="img/チャンス（draw）.png" alt="あいこ">');
+                document.getElementById("img").src = "あいこ.png";
             }
             if (myNumber - hisNumber == 1) {
-                $("#message2").html('<img src="img/lose.png" alt="lose">');
+                document.getElementById("img").src = "lose.png";
             }
             if (myNumber - hisNumber == 2) {
-                $("#message2").html('<img src="img/win.png" alt="win">');
+                document.getElementById("img").src = "win.png";
             }
             document.getElementById("message1").innerHTML = "相手の選択は " + hisHand;
             document.getElementById("message2").innerHTML = "勝敗の結果は " + judge;
